@@ -10,8 +10,8 @@
     @include flex-center;
     justify-content: space-between;
     padding: 10px 20px;
-    background: c.$color-dark-teal;
-    border-bottom: solid 4px c.$color-light-teal;
+    background: c.$primary-950;
+    border-bottom: solid 8px c.$primary-200;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
     .header-left {
@@ -29,13 +29,13 @@
             margin: 0;
 
             li {
-                color: c.$color-white;
+                color: c.$neutral-0;
                 cursor: pointer;
                 font-weight: 500;
                 transition: color 0.3s;
 
                 &:hover {
-                    color: c.$color-off-white;
+                    color: c.$neutral-0;
                 }
 
                 i {
@@ -53,8 +53,8 @@
         .notification {
             position: relative;
             font-size: 1.2rem;
-            color : c.$color-white;
-            margin-left: 10px;
+            color : c.$neutral-0;
+            padding: 20px;
             cursor: pointer;
         }
 
@@ -72,7 +72,7 @@
 
             i {
                 font-size: 0.7rem;
-                color: c.$color-white;
+                color: c.$neutral-0;
             }
         }
     }
