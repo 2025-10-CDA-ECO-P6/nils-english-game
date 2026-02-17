@@ -1,0 +1,107 @@
+@use "sass:list";
+@use "sass:map";
+@use "variables.scss" as c;
+
+$services: (
+    1: (
+        "img": "service-1.png",
+        "title": "An experience based on fun, learning and practice",
+        "desc": "We hope that your week will be filled with learning and hands-on experience, but most of all that you will have lots of fun and enjoyment !"
+    ),
+    2: (
+        "img": "service-2.png",
+        "title": "The basics of serious games through videos and quizzes",
+        "desc": "A team of serious game experts will join you in the English Game to share their experience and teach you the fundamentals of game mechanics."
+    ),
+    3: (
+        "img": "service-3.png",
+        "title": "Tools to design a project from A to Z",
+        "desc": "Each day will be based on a design process. From Monday to Friday, you will be supported as you design a project: define the concept, the level design, and the prototype, right up to producing the final game to present to the national competitors."
+    )
+);
+
+@mixin flex-center($direction: column) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+@each $id, $data in $services {
+    .card:nth-child(#{$id}) {
+        .card-image-container {
+            content: url('../assets/#{map.get($data, "img")}');
+        }
+        .catch-line::after {
+            content: "#{map.get($data, "title")}";
+        }
+        .description::after {
+            content: "#{map.get($data, "desc")}";
+        }
+    }
+}
+
+.service-section {
+    @include flex-center;
+    background-color: c.$neutral-0;
+    border-top: solid 2px c.$neutral-200;
+    border-radius: c.$rounded-lg c.$rounded-lg 0 0;
+    transform: translateY(-10px); 
+    padding-bottom: 30px;
+
+    h3 {
+        font-size: 1.8rem;
+        color: c.$primary-950;
+        font-weight: 900;
+        margin: 40px 0;
+    }
+}
+
+.service-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 40px;            
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;      
+}
+
+.card-image-container {
+    width: 85%;         
+    object-fit: contain;
+    background-color: c.$neutral-200;
+    padding: 30px;
+    border-radius: c.$rounded-xl;
+    margin-bottom: 25px;
+}
+
+.card-content {
+    width: 100%;
+    
+    .catch-line, .description {
+        &::after {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .catch-line {
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: c.$primary-700;
+        min-height: 3rem;  
+    }
+
+    .description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: c.$primary-800;
+    }
+}
