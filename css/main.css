@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background: #083c44;
+  background: #166f78;
   border-bottom: solid 8px #a5fcf8;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -66,7 +66,7 @@
 
 .hero-section {
   color: #cffefb;
-  background-color: #166f78;
+  background-color: #083c44;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,9 +118,102 @@
   object-fit: cover;
 }
 
+.card:nth-child(1) .card-image-container {
+  content: url("../assets/service-1.png");
+}
+.card:nth-child(1) .catch-line::after {
+  content: "An experience based on fun, learning and practice";
+}
+.card:nth-child(1) .description::after {
+  content: "We hope that your week will be filled with learning and hands-on experience, but most of all that you will have lots of fun and enjoyment !";
+}
+
+.card:nth-child(2) .card-image-container {
+  content: url("../assets/service-2.png");
+}
+.card:nth-child(2) .catch-line::after {
+  content: "The basics of serious games through videos and quizzes";
+}
+.card:nth-child(2) .description::after {
+  content: "A team of serious game experts will join you in the English Game to share their experience and teach you the fundamentals of game mechanics.";
+}
+
+.card:nth-child(3) .card-image-container {
+  content: url("../assets/service-3.png");
+}
+.card:nth-child(3) .catch-line::after {
+  content: "Tools to design a project from A to Z";
+}
+.card:nth-child(3) .description::after {
+  content: "Each day will be based on a design process. From Monday to Friday, you will be supported as you design a project: define the concept, the level design, and the prototype, right up to producing the final game to present to the national competitors.";
+}
+
+.service-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-top: solid 2px #e6e6e6;
+  border-radius: 16px 16px 0 0;
+  transform: translateY(-10px);
+  padding-bottom: 30px;
+}
+.service-section h3 {
+  font-size: 1.8rem;
+  color: #083c44;
+  font-weight: 900;
+  margin: 40px 0;
+}
+
+.service-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-container {
+  width: 85%;
+  object-fit: contain;
+  background-color: #e6e6e6;
+  padding: 30px;
+  border-radius: 32px;
+  margin-bottom: 25px;
+}
+
+.card-content {
+  width: 100%;
+}
+.card-content .catch-line::after, .card-content .description::after {
+  display: block;
+  width: 100%;
+}
+.card-content .catch-line {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #0f878f;
+  min-height: 3rem;
+}
+.card-content .description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #166f78;
+}
+
 * {
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 
 /*# sourceMappingURL=main.css.map */
