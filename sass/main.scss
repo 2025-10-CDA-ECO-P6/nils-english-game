@@ -1,0 +1,13 @@
+@use "sass:list";
+@use "sass:map";
+@use "variables.scss" as c;
+@use "header.scss";
+@use "hero.scss";
+@use "services.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    
+}
